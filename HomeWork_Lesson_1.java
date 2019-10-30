@@ -1,6 +1,6 @@
 /**
-* Домашнее задание к 1 знаятию
-* Оксана Масрковская
+* Домашнее задание к 1 занятию (Java_1)
+* Оксана Марковская
 * 29.10.2019
 * */
 
@@ -17,9 +17,9 @@ public class HomeWork_Lesson_1 {
       short sh = 3;
       int i = 25;
       long l = 23598746L;
-      float fl = 12.23f;
-      double db = 32;
-      char ch = 85;
+      float fl = 12.32f;
+      double db = 32.1216;
+      char ch = '&';
       boolean bl = true;
       String st = "Good Morning!";
     }
@@ -37,11 +37,7 @@ public class HomeWork_Lesson_1 {
      * в пределах от 10 до 20(включительно), если да – вернуть true, в противном случае – false;
      * **/
     private static boolean math_1(int a, int b){
-        if (a+b >= 10 & a+b <=20){
-            return true;
-        }else{
-            return false;
-        }
+        return (a + b >= 10 & a + b <=20);
     }
     /**
      * 5. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать
@@ -67,16 +63,12 @@ public class HomeWork_Lesson_1 {
      * Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
      * **/
     private static void year (int year){
-        if(year % 4 == 0){
+        if(year % 4 == 0 && year % 100 != 0){
             System.out.println(year + " год - високосный год.");
-        }else if (year % 400 == 0 ){
-            System.out.println(year + " год - високосный год");
-        }else if (year % 100 == 0 ) {
-            System.out.println(year + " год - не високосный год");
+        } else if (year % 400 == 0){
+            System.out.println(year + " год - високосный год.");
         }else{
-            System.out.println(year + " год - не високосный год");
+            System.out.println(year + " год - не високосный год.");
         }
     }
-
-
 }
